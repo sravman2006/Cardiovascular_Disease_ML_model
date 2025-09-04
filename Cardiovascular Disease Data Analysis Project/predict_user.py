@@ -25,7 +25,7 @@ def ask_user():
 
     bmi = weight / ((height / 100) ** 2)
 
-    # Create input dictionary
+    # Input dictionary
     input_dict = {
         "General_Health": general_health,
         "Checkup": checkup,
@@ -68,4 +68,5 @@ def ask_user():
     print(f"🔢 Confidence: {probability:.2%}")
 
 ask_user()
+
 
