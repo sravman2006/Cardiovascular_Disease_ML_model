@@ -6,7 +6,7 @@ model = joblib.load("heart_disease_model.pkl")
 expected_features = joblib.load("model_features.pkl")
 
 def ask_user():
-    print("🩺 Let's assess your cardiovascular risk. Please answer the following:")
+    print("Let's assess your cardiovascular risk. Please answer the following:")
 
     general_health = int(input("General Health (0=Poor, 1=Fair, 2=Good, 3=Very Good, 4=Excellent): "))
     checkup = int(input("Last Checkup (0=Never, 1=5+ years ago, 2=within 5 years, 3=within 2 years, 4=within 1 year): "))
@@ -64,9 +64,10 @@ def ask_user():
     probability = model.predict_proba(input_df)[0][prediction]
 
     # Output
-    print("\n🧠 Prediction:", "High Risk of Heart Disease" if prediction == 1 else "Low Risk of Heart Disease")
+    print("\n Prediction:", "High Risk of Heart Disease" if prediction == 1 else "Low Risk of Heart Disease")
     print(f"🔢 Confidence: {probability:.2%}")
 
 ask_user()
+
 
 
